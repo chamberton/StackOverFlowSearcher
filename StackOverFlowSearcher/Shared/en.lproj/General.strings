@@ -1,0 +1,23 @@
+/* 
+  General.strings
+  StackOverFlowSearcher
+
+  Created by Serge Mbamba on 2020/10/12.
+  Copyright © 2020 Serge Mbamba. All rights reserved.
+*/
+"000-Searching" = "Searching ...";
+"000-Plural" = "s";
+"000-Error-Occured" = "Something wrong occured";
+"000-Error" = "Error";
+"000-By" = "by";
+"000-Try-again" = "Try again";
+"000-Cancel" = "Cancel";
+"000-Loading" = "Loading ...";
+"000-Asked" = "Asked";
+"000-Viewed" = "Viewed";
+"000-Answered" = "Answered";
+"000-More-info" = "More info";
+"000-Vote" = "vote";
+"000-At" = "at";
+"000-Times" = "times";
+"000-Answer" = "Answer";

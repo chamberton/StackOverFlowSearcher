@@ -1,0 +1,6 @@
+framework module Pods_StackOverFlowSearcher {
+  umbrella header "Pods-StackOverFlowSearcher-umbrella.h"
+
+  export *
+  module * { export * }
+}

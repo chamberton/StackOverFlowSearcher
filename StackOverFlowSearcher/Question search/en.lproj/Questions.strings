@@ -1,0 +1,13 @@
+/* 
+  Article.strings
+  StackOverFlowSearcher
+
+  Created by Serge Mbamba on 2020/10/12.
+  Copyright © 2020 Serge Mbamba. All rights reserved.
+*/
+
+"001-Empty-questions-message" = "Enter some text to find related questions";
+"001-Vote" = "vote";
+"001-View" = "view";
+"001-Answer" = "answer";
+"001-No-questions" = "No questions found";

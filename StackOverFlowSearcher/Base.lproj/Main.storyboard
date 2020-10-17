@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CPb-Iy-VOy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Questions Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="QuestionsSearchViewController" customModule="StackOverFlowSearcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="gGS-Lh-7eG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Ti6-Yf-JE8"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3nR-gL-7Ym">
+                                <rect key="frame" x="0.0" y="44" width="414" height="764"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mzz-F0-NzZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Z4q-YT-sYs"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeA-b3-QRA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="764"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGV-MM-0px">
+                                        <rect key="frame" x="16" y="372" width="382" height="20.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="CGV-MM-0px" firstAttribute="centerX" secondItem="TeA-b3-QRA" secondAttribute="centerX" id="WYw-qq-TYt"/>
+                                    <constraint firstAttribute="trailing" secondItem="CGV-MM-0px" secondAttribute="trailing" constant="16" id="fZN-R4-e9I"/>
+                                    <constraint firstItem="CGV-MM-0px" firstAttribute="centerY" secondItem="TeA-b3-QRA" secondAttribute="centerY" id="g2Y-xr-moD"/>
+                                    <constraint firstItem="CGV-MM-0px" firstAttribute="leading" secondItem="TeA-b3-QRA" secondAttribute="leading" constant="16" id="pdz-D6-fwX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gGS-Lh-7eG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0gv-dc-usz"/>
+                            <constraint firstAttribute="bottom" secondItem="3nR-gL-7Ym" secondAttribute="bottom" id="4X5-QI-A7f"/>
+                            <constraint firstItem="TeA-b3-QRA" firstAttribute="height" secondItem="3nR-gL-7Ym" secondAttribute="height" id="CrH-vG-EMc"/>
+                            <constraint firstItem="TeA-b3-QRA" firstAttribute="leading" secondItem="3nR-gL-7Ym" secondAttribute="leading" id="DMK-nW-kKh"/>
+                            <constraint firstItem="3nR-gL-7Ym" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HCw-U8-j3q"/>
+                            <constraint firstItem="gGS-Lh-7eG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="N2t-iZ-iLb"/>
+                            <constraint firstItem="TeA-b3-QRA" firstAttribute="trailing" secondItem="3nR-gL-7Ym" secondAttribute="trailing" id="bzv-gR-BFs"/>
+                            <constraint firstItem="3nR-gL-7Ym" firstAttribute="top" secondItem="gGS-Lh-7eG" secondAttribute="bottom" id="gmL-xH-nse"/>
+                            <constraint firstItem="TeA-b3-QRA" firstAttribute="width" secondItem="3nR-gL-7Ym" secondAttribute="width" id="msC-Uj-YCa"/>
+                            <constraint firstItem="gGS-Lh-7eG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rDz-Tx-LVK"/>
+                            <constraint firstItem="3nR-gL-7Ym" firstAttribute="top" secondItem="gGS-Lh-7eG" secondAttribute="bottom" id="vrr-ER-sCn"/>
+                            <constraint firstItem="3nR-gL-7Ym" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zdG-R2-UMF"/>
+                            <constraint firstItem="TeA-b3-QRA" firstAttribute="top" secondItem="3nR-gL-7Ym" secondAttribute="top" id="zey-ej-CF1"/>
+                            <constraint firstItem="TeA-b3-QRA" firstAttribute="bottom" secondItem="3nR-gL-7Ym" secondAttribute="bottom" id="zgJ-zT-eV4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IgN-Ow-rpo"/>
+                    <connections>
+                        <outlet property="articleTermSearchBar" destination="gGS-Lh-7eG" id="8zR-H0-RJ1"/>
+                        <outlet property="emptyMessageLabel" destination="CGV-MM-0px" id="AkH-dw-iqV"/>
+                        <outlet property="emptyStateView" destination="TeA-b3-QRA" id="XdN-F9-P0W"/>
+                        <outlet property="questionsTableView" destination="3nR-gL-7Ym" id="bmd-vD-2sp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="133.92857142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yua-st-oBM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CPb-Iy-VOy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="k9s-xw-xNF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iXB-k5-wkx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WaY-z8-wBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+</document>
