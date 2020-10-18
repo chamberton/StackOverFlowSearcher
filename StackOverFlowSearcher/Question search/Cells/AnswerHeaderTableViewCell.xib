@@ -26,36 +26,36 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1zU-8e-n4t">
-                                <rect key="frame" x="0.0" y="29" width="122.5" height="16"/>
+                                <rect key="frame" x="0.0" y="29" width="133" height="16"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9KE-Uf-Y0j">
-                                        <rect key="frame" x="0.0" y="0.0" width="27.5" height="16"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="16"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="12"/>
+                                                    <font key="NSFont" metaFont="label" size="12"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="100" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITa-oH-Zd7">
-                                        <rect key="frame" x="47.5" y="0.0" width="27.5" height="16"/>
+                                        <rect key="frame" x="51" y="0.0" width="31" height="16"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="12"/>
+                                                    <font key="NSFont" metaFont="label" size="12"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGT-Ab-ut8">
-                                        <rect key="frame" x="95" y="0.0" width="27.5" height="16"/>
+                                        <rect key="frame" x="102" y="0.0" width="31" height="16"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Label">
                                                 <attributes>
-                                                    <font key="NSFont" metaFont="system" size="12"/>
+                                                    <font key="NSFont" metaFont="label" size="12"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -137,6 +137,9 @@
                                     <segment title="Oldest"/>
                                     <segment title="Votes"/>
                                 </segments>
+                                <connections>
+                                    <action selector="didChangeSortingCriteria:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Yzw-ND-p5K"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                     </stackView>
@@ -179,6 +182,7 @@
                 <outlet property="dateDescriptionLabel" destination="mmm-P5-LSP" id="6Iw-OW-iEZ"/>
                 <outlet property="profileImageView" destination="Ggm-FE-vPb" id="vEm-7Q-V2y"/>
                 <outlet property="reputationLabel" destination="OPN-GY-RUG" id="6e9-6E-EBo"/>
+                <outlet property="sortingCriteriaSegmentedControl" destination="mHa-yV-Clp" id="bM8-XR-KGp"/>
                 <outlet property="titleLabel" destination="2cr-cP-Loo" id="6nJ-Iu-5lu"/>
                 <outlet property="viewCountLabeel" destination="AGT-Ab-ut8" id="fzB-gQ-rKz"/>
             </connections>

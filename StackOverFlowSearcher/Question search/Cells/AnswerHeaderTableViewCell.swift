@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol AnswerSorter: class {
+    func sortingView(_ view: AnswerHeaderTableViewCell, didRequestSortingBasedOn sortingCriteria: Answer.SortingCriteria)
+}
+
 class AnswerHeaderTableViewCell: UITableViewCell {
     static let nib = UINib(nibName: "AnswerHeaderTableViewCell", bundle: nil)
     static let reuseIdentifier = "AnswerHeaderTableViewCell"
+    public weak var sortingDelegate: AnswerSorter?
+    
     typealias Configuration = (HeadingDTO)
     struct HeadingDTO {
         let title: String
@@ -26,9 +32,15 @@ class AnswerHeaderTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        assert(sortingCriteriaSegmentedControl.numberOfSegments == Answer.SortingCriteria.allCases.count, "Should have same number of element")
+        for index in Answer.SortingCriteria.allCases.indices {
+            sortingCriteriaSegmentedControl.setTitle(Answer.SortingCriteria.allCases[index].title, forSegmentAt: index)
+        }
+        sortingCriteriaSegmentedControl.selectedSegmentIndex = Answer.SortingCriteria.allCases.firstIndex(of: Answer.sortingCriteria)!
         separatorInset = .init(top: 0, left: .greatestFiniteMagnitude, bottom: 0, right: 0)
     }
     
+    @IBOutlet weak private var sortingCriteriaSegmentedControl: UISegmentedControl!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var creationDetailsLabel: UILabel!
     @IBOutlet weak private var answerTimeLabel: UILabel!
@@ -73,5 +85,10 @@ class AnswerHeaderTableViewCell: UITableViewCell {
                                                      .font: UIFont.systemFont(ofSize: 10, weight: .semibold)], range: authorNameRange)
         
         return attributedCreationDetailsText
+    }
+    
+    @IBAction func didChangeSortingCriteria(_ sender: Any) {
+        let currentSortingCriteria =  Answer.SortingCriteria.allCases[sortingCriteriaSegmentedControl.selectedSegmentIndex]
+        sortingDelegate?.sortingView(self, didRequestSortingBasedOn: currentSortingCriteria)
     }
 }

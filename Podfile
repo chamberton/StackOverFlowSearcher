@@ -10,6 +10,7 @@ target 'StackOverFlowSearcher' do
   pod 'SwiftyBeaver'
   pod 'ReachabilitySwift'
   pod 'MBProgressHUD'
+  pod 'DateToolsSwift'
   
   target 'StackOverFlowSearcherTests' do
     pod 'Cuckoo'

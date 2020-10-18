@@ -23,14 +23,10 @@ class AnswerTableViewCell: UITableViewCell {
     @IBOutlet weak private var dateLabel: UILabel!
     @IBOutlet weak private var authorLabel: UILabel!
     @IBOutlet weak private var reputationLabel: UILabel!
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak private var profileImageView: UIImageView!
+    
     static let nib = UINib(nibName: "AnswerTableViewCell", bundle: nil)
     static let reuseIdentifier = "AnswerTableViewCell"
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     
     func accept(configuration: Configuration) {

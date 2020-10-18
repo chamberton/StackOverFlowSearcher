@@ -53,6 +53,7 @@ extension QuestionAnswersViewController {
                 return UITableViewCell()
             }
             headerCell.accept(configuration: questionAnswersController.headerConfiguration)
+            headerCell.sortingDelegate = self
             return headerCell
         }
         guard let answerCell = tableView.dequeueReusableCell(withIdentifier: AnswerTableViewCell.reuseIdentifier, for: indexPath) as? AnswerTableViewCell else {
@@ -92,6 +93,27 @@ extension QuestionAnswersViewController {
         showFailureAlert(title: errorInfo.errorTitle,
                          message: errorInfo.errorMessage) { [unowned self] in
                             self.loadAnswers()
+        }
+    }
+}
+
+
+extension QuestionAnswersViewController: AnswerSorter {
+    func sortingView(_ view: AnswerHeaderTableViewCell, didRequestSortingBasedOn sortingCriteria: Answer.SortingCriteria) {
+        defer { tableView.isScrollEnabled = true }
+        DispatchQueue.main.async {
+            self.showLoadingIndicator("000-Sorting")
+        }
+        tableView.isScrollEnabled = false
+        Answer.sortingCriteria = sortingCriteria
+        answerConfigurations =  questionAnswersController.sortedAnswers()
+        let updatableIndexPaths = answerConfigurations.indices.map { (index) -> IndexPath in
+            IndexPath(row: index + 1, section: 0)
+        }
+        
+        DispatchQueue.main.async { [unowned self] in
+            self.tableView.reloadRows(at: updatableIndexPaths, with: .fade)
+            self.hideLoadingIndicator()
         }
     }
 }

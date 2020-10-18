@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DateToolsSwift
 
 class QuestionAnswersController {
     private(set) var answers = [Answer]()
@@ -18,15 +19,16 @@ class QuestionAnswersController {
         if answers.count > 1 {
             answerCountDescription += LocalizedCopy(named: "000-Plural")
         }
+        let numberOfViewDescriptiton = "\(question.viewCount) \(LocalizedCopy(named: "000-Times"))"
         return AnswerHeaderTableViewCell.Configuration(title: question.title,
-                                                creationTimeDescription: question.creationDate.friendlyDescription,
-                                                answeringTimeDescriptiton: question.lastActivityDate.friendlyDescription,
-                                                numberOfViewDescriptiton: "\(question.viewCount) \(LocalizedCopy(named: "000-Times"))",
-            author: question.owner.displayName,
-            imageURL: question.owner.profileImage,
-            authorReputation: question.owner.reputation,
-            dateDescription: question.creationDate.friendlyFullYearDescription,
-            answerCountDescription: answerCountDescription)
+                                                       creationTimeDescription: question.creationDate.timeAgoSinceNow,
+                                                       answeringTimeDescriptiton: question.lastActivityDate.timeAgoSinceNow,
+                                                       numberOfViewDescriptiton: numberOfViewDescriptiton,
+                                                       author: question.owner.displayName,
+                                                       imageURL: question.owner.profileImage,
+                                                       authorReputation: question.owner.reputation,
+                                                       dateDescription: question.creationDate.friendlyFullYearDescription,
+                                                       answerCountDescription: answerCountDescription)
     }
     
     init(question: Question) {
@@ -38,8 +40,8 @@ class QuestionAnswersController {
         answers.removeAll()
         do {
             if let answers = try articleRepository?.fetchAnswersForQuestionIdentified(by: question.questionId) {
-                self.answers = answers
-                questionsHandler(makeViewDetailsForCurrentAnswers())
+                self.answers = answers.sorted()
+                questionsHandler(makeViewDetailsForCurrentAnswers(answers: self.answers))
             } else {
                 errorHandler((LocalizedCopy(named: "000-Error"), LocalizedCopy(named: "000-Error-Occured")))
             }
@@ -51,7 +53,7 @@ class QuestionAnswersController {
     }
     
     
-    private func makeViewDetailsForCurrentAnswers() -> [AnswerTableViewCell.Configuration] {
+    private func makeViewDetailsForCurrentAnswers(answers: [Answer]) -> [AnswerTableViewCell.Configuration] {
         return answers.map { (answer) -> AnswerTableViewCell.Configuration in
             var voteDescription =  "\(answer.score) \n \(LocalizedCopy(named: "000-Vote"))"
             if answer.score > 1 {
@@ -65,4 +67,8 @@ class QuestionAnswersController {
                                                      authorRepuation: answer.owner.reputation)
         }
     }
+    
+    public func sortedAnswers() -> [AnswerTableViewCell.Configuration] {
+          return makeViewDetailsForCurrentAnswers(answers: answers.sorted())
+      }
 }

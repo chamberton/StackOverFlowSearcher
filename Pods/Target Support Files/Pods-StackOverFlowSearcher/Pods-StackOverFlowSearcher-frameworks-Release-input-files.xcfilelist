@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-StackOverFlowSearcher/Pods-StackOverFlowSearcher-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework
 ${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework
