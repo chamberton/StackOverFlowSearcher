@@ -18,7 +18,7 @@ class AnswerTableViewCell: UITableViewCell {
         let imageURL: String
         let authorRepuation: Int64
     }
-    @IBOutlet weak private var bodyLabel: UILabel!
+    @IBOutlet weak private var bodyTextView: UITextView!
     @IBOutlet weak private var voteLabel: UILabel!
     @IBOutlet weak private var dateLabel: UILabel!
     @IBOutlet weak private var authorLabel: UILabel!
@@ -31,7 +31,7 @@ class AnswerTableViewCell: UITableViewCell {
     
     func accept(configuration: Configuration) {
         voteLabel.text = configuration.voteDescription
-        bodyLabel.attributedText = configuration.body.htmlToAttributedString
+        bodyTextView.attributedText = configuration.body.htmlToAttributedString
         dateLabel.attributedText = makeAtributedContent(prefix: LocalizedCopy(named: "000-Answered"),
                                                         information: configuration.dateDescription)
         authorLabel.text = configuration.author

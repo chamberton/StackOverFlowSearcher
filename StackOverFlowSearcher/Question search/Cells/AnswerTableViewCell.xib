@@ -41,27 +41,24 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6fo-Ey-c5y">
-                                <rect key="frame" x="52" y="0.0" width="249" height="99.5"/>
+                                <rect key="frame" x="52" y="0.0" width="249" height="152.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crG-jU-J2j">
-                                        <rect key="frame" x="0.0" y="0.0" width="249" height="20.5"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Label">
-                                                <attributes>
-                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XVu-DI-IYE">
+                                        <rect key="frame" x="0.0" y="0.0" width="249" height="73.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzQ-8C-plz">
-                                        <rect key="frame" x="0.0" y="28.5" width="249" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="81.5" width="249" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OWQ-K3-WEc">
-                                        <rect key="frame" x="0.0" y="57" width="249" height="42.5"/>
+                                        <rect key="frame" x="0.0" y="110" width="249" height="42.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PhZ-kj-Z45">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
@@ -114,7 +111,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="authorLabel" destination="OlY-Da-vXr" id="WR3-gd-HHT"/>
-                <outlet property="bodyLabel" destination="crG-jU-J2j" id="UBw-1o-aQO"/>
+                <outlet property="bodyTextView" destination="XVu-DI-IYE" id="UJa-Rh-3uv"/>
                 <outlet property="dateLabel" destination="VzQ-8C-plz" id="sJS-oc-d4z"/>
                 <outlet property="profileImageView" destination="PhZ-kj-Z45" id="XGW-UC-AsP"/>
                 <outlet property="reputationLabel" destination="A2G-KB-ek0" id="NIF-SW-fqL"/>

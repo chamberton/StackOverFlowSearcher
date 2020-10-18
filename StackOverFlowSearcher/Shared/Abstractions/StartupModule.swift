@@ -14,5 +14,5 @@ import UIKit
     var excecutionOrder: UInt { get }
     
     init()
-    func initialise()
+    func execute()
 }

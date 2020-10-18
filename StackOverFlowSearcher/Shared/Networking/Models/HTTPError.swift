@@ -21,38 +21,38 @@ enum HTTPError: Error {
     var titleForRenderedError: String {
         switch self {
         case .noInternetConnection:
-            return "No connectivity"
+            return LocalizedCopy(named: "000-No-connectivity-title")
         case .unknown:
-            return "Error"
+            return LocalizedCopy(named: "000-Error")
         case .timedOut:
-            return "Time out"
+            return LocalizedCopy(named: "000-Timeout-title")
         case .failed:
-            return "Failure"
+           return LocalizedCopy(named: "000-Failure")
         case .invalidParameters:
-             return "Invalid request"
+             return LocalizedCopy(named: "000-Invalid-request")
         case .notFound:
-             return "Unreachable"
+            return LocalizedCopy(named: "000-Unreachable")
         case .badData:
-             return "Bad data"
+             return LocalizedCopy(named: "000-Bad-data-title")
         }
     }
     
     var messageForRenderedError: String {
         switch self {
         case .noInternetConnection:
-            return "Please make sure that your device is connected to the Internet."
+            return LocalizedCopy(named: "000-No-Internet")
         case .unknown:
-            return "Something wrong occured."
+            return LocalizedCopy(named: "000-No-Error-message")
         case .timedOut:
-            return "Operation timed out."
+            return LocalizedCopy(named: "000-Time-out")
         case .failed:
-            return "Unable to load"
+            return LocalizedCopy(named: "000-Failed")
         case .invalidParameters:
-            return "Invalid psremeters were foundf inyour request."
+            return LocalizedCopy(named: "000-Invalid-param")
         case .notFound:
-            return "No content were found at requested URL"
+            return LocalizedCopy(named: "000-Not-found")
         case .badData:
-            return "We received data that could not haved been iterpreted."
+            return LocalizedCopy(named: "000-Bad-data")
         }
     }
 }

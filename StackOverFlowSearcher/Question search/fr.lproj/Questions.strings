@@ -7,3 +7,7 @@
 */
 
 "001-Empty-arcticles-message" = "Taper un text pour trouver les question y relatives";
+"001-Vote" = "vote";
+"001-View" = "vue";
+"001-Answer" = "reponse";
+"001-No-questions" = "Aucune question n'a été trouvée";

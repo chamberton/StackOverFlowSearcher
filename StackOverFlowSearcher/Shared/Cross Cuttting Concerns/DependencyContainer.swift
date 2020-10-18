@@ -36,7 +36,7 @@ func resolve<Abstraction>(_ abstractType: Abstraction.Type) -> Abstraction? {
 fileprivate final class DependencyContainer: StartupModule {
     let excecutionOrder: UInt = .min
     
-    func initialise() {
+    func execute() {
         registerClasses()
         registerImpentationForProtocols()
     }

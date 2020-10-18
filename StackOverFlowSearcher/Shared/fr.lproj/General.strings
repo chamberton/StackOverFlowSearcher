@@ -6,3 +6,36 @@
   Copyright © 2020 Serge Mbamba. All rights reserved.
 */
 "000-Searching" = "Recherche en cours ...";
+"000-Plural" = "s";
+"000-Error-Occured" = "Il ya eu une erreur";
+"000-Error" = "Erreur";
+"000-By" = "par";
+"000-Try-again" = "Ré-essayer";
+"000-Cancel" = "Annuler";
+"000-Loading" = "Chargement ...";
+"000-Asked" = "Posée";
+"000-Viewed" = "Vue";
+"000-Answered" = "Repondue";
+"000-More-info" = "Plus d'info";
+"000-Vote" = "vote";
+"000-At" = "à";
+"000-Times" = "fois";
+"000-Answer" = "Reponse";
+"000-Oldest" = "Plus vieux";
+"000-Active" = "Actif";
+
+"000-No-Internet" = "Rassurez-vous que votre téléphone a la connexion internet";
+"000-No-Error-message" =  "Il y a eu erreur";
+"000-Time-out" = "Operation a dépassé le temps d'atttente.";
+"000-Failed" = "Impossible de trouver une reponse";
+"000-Invalid-param" = "Il y a eu de paramètres invalides.";
+"000-Not-found" = "Aucun contenu n'a été trouvé";
+"000-Bad-data" = "Impssobible d'interpreter les données reçues";
+
+"000-No-connectivity-title" = "Pas de connexion internet";
+"000-Error" = "Erreur";
+"000-Timeout-title" = "Time out";
+"000-Failure" = "Echec";
+"000-Invalid-request"  = "Requête non conforme";
+"000-Unreachable" = "Unattaignable";
+"000-Bad-data-title" = "Mauvaise donnée";

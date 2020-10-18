@@ -23,3 +23,19 @@
 "000-Answer" = "Answer";
 "000-Oldest" = "Oldest";
 "000-Active" = "Active";
+
+"000-No-Internet" = "Please make sure that your device is connected to the Internet.";
+"000-No-Error-message" =  "Something wrong occured.";
+"000-Time-out" = "Operation timed out.";
+"000-Failed" = "Unable to load";
+"000-Invalid-param" = "Invalid psremeters were foundf inyour request.";
+"000-Not-found" = "No content were found at requested URL";
+"000-Bad-data" = "We received data that could not haved been interpreted.";
+
+"000-No-connectivity-title" = "No connectivity";
+"000-Error" = "Error";
+"000-Timeout-title" = "Time out";
+"000-Failure" = "Failure";
+"000-Invalid-request" = "Invalid request";
+"000-Unreachable" = "Unreachable";
+"000-Bad-data-title" = "Bad data";

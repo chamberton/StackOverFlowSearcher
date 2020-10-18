@@ -32,7 +32,7 @@ final class ConnectivityInteractor: StartupModule, DependencyResolvable {
         registerSingleton({ self }, for: ConnectivityInteractor.self)
     }
     
-    func initialise() {
+    func execute() {
         startTrackingNetworkStatus()
     }
     

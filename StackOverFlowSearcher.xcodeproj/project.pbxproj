@@ -43,7 +43,6 @@
 		55EDE5122534FA30002FE1BC /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE5112534FA30002FE1BC /* Host.swift */; };
 		55EDE5172534FAA6002FE1BC /* StakOverflowHTTPPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE5162534FAA6002FE1BC /* StakOverflowHTTPPath.swift */; };
 		55EDE51A2534FABA002FE1BC /* URLBuildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE5192534FABA002FE1BC /* URLBuildable.swift */; };
-		55EDE51C2534FC4C002FE1BC /* HTTPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE51B2534FC4C002FE1BC /* HTTPConstants.swift */; };
 		55EDE5202534FED0002FE1BC /* ConnectivityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE51F2534FED0002FE1BC /* ConnectivityInteractor.swift */; };
 		55EDE526253502A9002FE1BC /* QuestionAnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE525253502A9002FE1BC /* QuestionAnswersViewController.swift */; };
 		55EDE5292535045C002FE1BC /* QuestionsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55EDE5282535045C002FE1BC /* QuestionsSearchController.swift */; };
@@ -108,7 +107,6 @@
 		55EDE5112534FA30002FE1BC /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
 		55EDE5162534FAA6002FE1BC /* StakOverflowHTTPPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakOverflowHTTPPath.swift; sourceTree = "<group>"; };
 		55EDE5192534FABA002FE1BC /* URLBuildable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuildable.swift; sourceTree = "<group>"; };
-		55EDE51B2534FC4C002FE1BC /* HTTPConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPConstants.swift; sourceTree = "<group>"; };
 		55EDE51F2534FED0002FE1BC /* ConnectivityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityInteractor.swift; sourceTree = "<group>"; };
 		55EDE525253502A9002FE1BC /* QuestionAnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswersViewController.swift; sourceTree = "<group>"; };
 		55EDE5282535045C002FE1BC /* QuestionsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsSearchController.swift; sourceTree = "<group>"; };
@@ -292,7 +290,6 @@
 			isa = PBXGroup;
 			children = (
 				55EDE5112534FA30002FE1BC /* Host.swift */,
-				55EDE51B2534FC4C002FE1BC /* HTTPConstants.swift */,
 				55DC37B125367926005C7611 /* HTTPError.swift */,
 			);
 			path = Models;
@@ -619,7 +616,6 @@
 				559F0F6F253B977500E27460 /* AnswerHeaderTableViewCell.swift in Sources */,
 				552E756B2537C2970015431D /* DependencyResolvable.swift in Sources */,
 				55DC37B025365E1F005C7611 /* StartupModule.swift in Sources */,
-				55EDE51C2534FC4C002FE1BC /* HTTPConstants.swift in Sources */,
 				55EDE52B2535046C002FE1BC /* QuestionAnswersController.swift in Sources */,
 				55EDE5002534F846002FE1BC /* SceneDelegate.swift in Sources */,
 				55DC37AD25365839005C7611 /* Logger.swift in Sources */,

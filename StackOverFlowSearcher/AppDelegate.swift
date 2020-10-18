@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         for startUpModule in startUpModules {
-            startUpModule.initialise()
+            startUpModule.execute()
         }
         return true
     }
